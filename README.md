@@ -31,7 +31,7 @@ This project is a simple line-following robot using two TT motors, three IR sens
 
 - **Motor Speeds**
   - `MOTOR_SPEED`: Normal forward speed.
-  - `NC_SPEED`: Reduced speed for better control.
+  - `NC_SPEED`: No confidence speed, when bot doesn't see forward path revert to lesser speed amount.
   - `REV_SPEED`: Reverse speed for sharp turns or reversing.
 
 - **PID Control Parameters**
@@ -45,7 +45,6 @@ A watchdog timer (`wdt`) is set to 250ms, which resets the controller if the cod
 
 - `rotateMotor(int rightMotorSpeed, int leftMotorSpeed)`: Controls the motors' speed and direction.
 - `rotateMotorSharp(int rightMotorSpeed, int leftMotorSpeed, int delayms)`: Controls the motors for sharp turns with a specified delay.
-- `sgn(int a)`: Helper function to return the sign of a given integer.
 
 ### Control Loop
 
